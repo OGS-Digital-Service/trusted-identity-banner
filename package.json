@@ -1,0 +1,24 @@
+{
+  "name": "trusted-identity-banner",
+  "version": "1.0.0",
+  "description": "This is an official website of the State of New York",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OGS-Digital-Service/trusted-identity-banner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OGS-Digital-Service/trusted-identity-banner/issues"
+  },
+  "homepage": "https://github.com/OGS-Digital-Service/trusted-identity-banner#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "tailwindcss": "^3.2.4"
+  }
+}
