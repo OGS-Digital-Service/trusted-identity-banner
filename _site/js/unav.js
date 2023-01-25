@@ -5,10 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const unavarrow = document.getElementById('unav-arrow');
 
     unavbutton.addEventListener("click", showdisclouse) 
-    
-    if (window.innerWidth < 768){
-        unavbanner.addEventListener("click", showdisclouse) 
-    }
+    unavbanner.addEventListener("click", clickdisclouse) 
+
+    function clickdisclouse (event) {
+        var target = event.target;
+            if (target === unavbutton || unavbutton.contains(target)) {
+        return;
+        }
+        showdisclouse();
+        }
 
     function showdisclouse () {
         disclosure.classList.toggle('unav-hidden');
