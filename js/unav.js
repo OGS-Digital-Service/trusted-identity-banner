@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
         }
         showdisclouse();
-        }
+    }
 
     function showdisclouse () {
         disclosure.classList.toggle('unav-hidden');
         disclosure.classList.toggle('unav-flex');
         unavarrow.classList.toggle('unav-rotate-180');
-
     }
 })

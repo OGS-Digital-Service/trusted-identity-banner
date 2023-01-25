@@ -16,6 +16,7 @@ Thumbs.db
 /reports
 /node_modules
 
+
 /.vscode
 # User-specific files
 *.rsuser
