@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['sans-serif']
+      sans: ['Tahoma ', 'sans-serif']
      },
     extend: {
       colors: {

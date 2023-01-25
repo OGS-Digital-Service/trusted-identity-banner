@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-    .unav-check::after {
-        content: '^'
+    .unav-text-12 {
+        font-size: 12px;
     }
 }
