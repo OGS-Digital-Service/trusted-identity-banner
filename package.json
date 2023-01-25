@@ -4,7 +4,7 @@
   "description": "This is an official website of the State of New York",
   "main": "index.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/tailwind.css --minify --watch",
+    "start": "npx @11ty/eleventy --serve & npx tailwindcss -i tailwind-setup.css -o css/unav.css --minify --watch",
     "test": "pa11y-ci"
   },
   "repository": {
