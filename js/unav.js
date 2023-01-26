@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const unavbanner = document.getElementById('unav-banner');
     const unavbutton = document.getElementById('trust-disclose');
-    const disclosure = document.getElementById('offical-site-disclosure');
+    const disclosure = document.getElementById('site-disclosure');
     const unavarrow = document.getElementById('unav-arrow');
 
     unavbutton.addEventListener("click", showdisclouse) 
+    
     unavbanner.addEventListener("click", clickdisclouse) 
     document.addEventListener("click", clickoutside)
 
@@ -24,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function clickdisclouse (evt) {
         var target = evt.target;
             if (target === unavbutton || unavbutton.contains(target)) {
-        return;
-        }
+            return;
+            }
         showdisclouse();
         unavAria();
     }
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         disclosure.classList.toggle('unav-hidden');
         disclosure.classList.toggle('unav-flex');
         unavarrow.classList.toggle('unav-rotate-180');
+        unavAria();
     }
 
     function unavAria () {
@@ -45,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             disclosure.setAttribute('aria-hidden', true)
             unavbutton.setAttribute('aria-expanded', false)
         }
-
     }
 })
 

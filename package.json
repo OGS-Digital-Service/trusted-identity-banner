@@ -20,6 +20,8 @@
   "homepage": "https://github.com/OGS-Digital-Service/trusted-identity-banner#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "pa11y-ci": "^3.0.1",
+    "pa11y-ci-reporter-html": "^5.0.2",
     "tailwindcss": "^3.2.4"
   }
 }
