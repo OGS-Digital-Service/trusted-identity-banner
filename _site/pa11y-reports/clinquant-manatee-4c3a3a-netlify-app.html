@@ -194,18 +194,18 @@
 <body>
 	<main>
 		<h1>Pa11y results for "https://clinquant-manatee-4c3a3a.netlify.app/"</h1>
-		<h2>Generated at: Thu Jan 26 2023 14:24:57 GMT-0500 (Eastern Standard Time)</h2>
-		<h2>Runners (with issues): none</h2>
+		<h2>Generated at: Thu Jan 26 2023 14:27:05 GMT-0500 (Eastern Standard Time)</h2>
+		<h2>Runners (with issues): axe, htmlcs</h2>
 
 		<p class="filter">
 			<span class="label">Toggle by type</span>
 			<span class="count error" id="error-count">
 				<span class="left-bar" aria-hidden="true"></span>
-				<span class="body">0 errors</span>
+				<span class="body">1 errors</span>
 			</span>
 			<span class="count warning" id="warning-count">
 				<span class="left-bar" aria-hidden="true"></span>
-				<span class="body">0 warnings</span>
+				<span class="body">2 warnings</span>
 			</span>
 			<span class="count notice" id="notice-count">
 				<span class="left-bar" aria-hidden="true"></span>
@@ -213,6 +213,22 @@
 			</span>
 		</p>
 		<ul class="issues">
+			<li class="issue error">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Error/Serious</strong>: Elements must only use allowed ARIA attributes</h3><p>Ensures ARIA attributes are allowed for an element&#x27;s role</p><p><a href="https://dequeuniversity.com/rules/axe/4.6/aria-allowed-attr?application&#x3D;axeAPI">axe: aria-allowed-attr</a></p><p class="code">&lt;div aria-label&#x3D;&quot;An official website of the state of new york&quot; id&#x3D;&quot;unav-banner&quot;&gt;
+  &lt;div class&#x3D;&quot;unav-flex unav-f...&lt;/div&gt;</p><p class="code">(selector "#unav-banner")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="code">&lt;a href&#x3D;&quot;#main-site-content-for-skiplink&quot; class&#x3D;&quot;unav-sr-only focus:unav-not-sr-only unav-text-blue-700 unav-underline&quot;&gt;Skip to Main Content&lt;/a&gt;</p><p class="code">(selector "html &gt; body &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: Anchor element found with link content, but no href, ID or name attribute has been supplied.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc4_1_2">htmlcs: WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.Placeholder</a></p><p class="code">&lt;a class&#x3D;&quot;&quot;&gt; this is a flag &lt;/a&gt;</p><p class="code">(selector "#unav-banner &gt; a")</p></div>
+			</li>
 		</ul>
 	</main>
 	<script>
