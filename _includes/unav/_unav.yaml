@@ -1,21 +1,5 @@
 params:
-- name: alert
+- name: none
   type: string
   required: false
-- name: altertlink
-  type: string
-  required: false
-- name: alertlinktitle
-  type: string
-  required: false
-- name: warning
-  type: string
-  required: false
-- name: warninglink
-  type: string
-  required: false
-- name: warninglinktitle
-  type: string
-  required: false
-
-
+  description: no parameters have been set for this component yet
