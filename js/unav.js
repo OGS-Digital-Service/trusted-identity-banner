@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const unavarrow = document.getElementById('unav-arrow');
 
     unavbutton.addEventListener("click", showdisclouse) 
-    
-    unavbanner.addEventListener("click", clickdisclouse) 
     document.addEventListener("click", clickoutside)
 
     function clickoutside (evt) {
@@ -22,15 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     }
 
-    function clickdisclouse (evt) {
-        var target = evt.target;
-            if (target === unavbutton || unavbutton.contains(target)) {
-            return;
-            }
-        showdisclouse();
-        unavAria();
-    }
-
     function showdisclouse () {
         disclosure.classList.toggle('unav-hidden');
         disclosure.classList.toggle('unav-flex');
@@ -39,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function unavAria () {
-        if (disclosure.getAttribute('aria-hidden') == "true" && unavbutton.getAttribute('aria-expanded') == "false"){
+        if (disclosure.getAttribute('aria-hidden') === "true" && unavbutton.getAttribute('aria-expanded') === "false"){
             disclosure.setAttribute('aria-hidden', false)
             unavbutton.setAttribute('aria-expanded', true)
         }
@@ -49,6 +38,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 })
-
-
-// setAttribute('aria-expanded', false)
