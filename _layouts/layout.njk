@@ -11,13 +11,13 @@
   </head>
   <body>
   <a href="#main-site-content-for-skiplink" class="unav-sr-only focus:unav-not-sr-only unav-text-blue-700 unav-underline">Skip to Main Content</a>
-    {% from '../_includes/_components.njk' import unav, disclosure%}
-    
+    {% from '../_includes/_components.njk' import unav, disclosure, global, search, translate, alert, logo, button %}
     {{
       unav({})
     }}
-    
-    
+    {{
+      global({})
+    }}
     <main class="" id="main-site-content-for-skiplink">
     {{ content | safe }}
     </main>
