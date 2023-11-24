@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else {
                 disclosure.classList.add('unav-hidden');
                 disclosure.classList.remove('unav-flex');
-                unavarrow.classList.add('fa-rotate-180');
+                unavarrow.classList.remove('fa-rotate-180');
                 disclosure.setAttribute('aria-hidden', true)
                 unavbutton.setAttribute('aria-expanded', false)
             }
