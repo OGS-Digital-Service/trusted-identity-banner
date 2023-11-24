@@ -1,0 +1,8 @@
+params:
+- name: none
+  type: string
+  required: false
+  description: no parameters have been set for this component yet
+
+
+
