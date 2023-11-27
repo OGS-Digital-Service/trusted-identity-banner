@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const unavbutton = document.getElementById('trust-disclose');
     const disclosure = document.getElementById('site-disclosure');
     const unavarrow = document.getElementById('unav-arrow');
+    const translatebutton = document.getElementById('translate-button');
+    const translatelist = document.getElementById('translate-list');
+    const translatearrow = document.getElementById('translate-arrow');
 
+    translatebutton.addEventListener("click",showtranslate) 
     unavbutton.addEventListener("click", showdisclouse) 
     document.addEventListener("click", clickoutside)
 
@@ -21,11 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showdisclouse () {
-        disclosure.classList.toggle('unav-hidden');
-        disclosure.classList.toggle('unav-flex');
-        unavarrow.classList.toggle('fa-rotate-180');
-        unavAria();
+            disclosure.classList.toggle('unav-hidden');
+            disclosure.classList.toggle('unav-flex');
+            unavarrow.classList.toggle('fa-rotate-180');
+            unavAria();
     }
+
+    function showtranslate () {
+        translatelist.classList.toggle('unav-hidden');
+        translatelist.classList.toggle('unav-flex');
+        translatearrow.classList.toggle('fa-rotate-180');
+        unavAria();
+}
 
     function unavAria () {
         if (disclosure.getAttribute('aria-hidden') === "true" && unavbutton.getAttribute('aria-expanded') === "false"){

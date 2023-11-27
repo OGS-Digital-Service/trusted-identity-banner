@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Tahoma ', 'sans-serif']
+      sans: ['Proxima Nova ', 'sans-serif']
      },
     extend: {
       colors: {
