@@ -6,6 +6,7 @@
     <meta name="description" content="NYS Trusted Identity Banner Demo">
     <meta name="generator" content="11ty/eleventy">    
     <link href="/css/unav.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -69,19 +70,16 @@
 
     
     <div class="unav-flex unav-items-center unav-order-3 unav-ml-auto unav-mr-3">
-   
-    
-    
         <div class="smt-selector">
             <nav aria-labelledby="langnav_header">
                 <ul class="smt-menu">
                     <li class="smt-trigger" data-once="bind-click-event">
-                        <button class="smt-trigger-link unav-text-base unav-text-ny-blue unav-px-2.5" tabindex="0" id="translate-button">
+                        <button class="smt-trigger-link unav-text-base unav-text-ny-blue " tabindex="0" id="translate-button" aria-expanded="false">
                              <span aria-hidden="true"><i class="fa-solid fa-globe unav-text-black"></i></span>
-                            <span class="smt-lang " id="langnav_header">Translate</span>
+                            <span class="smt-lang unav-font-bold unav-px-2" id="langnav_header">Translate</span>
                             <span aria-hidden="true"><i class="fa-solid fa-angle-down" id="translate-arrow"></i></span>
                         </button>
-                        <ul class="language-links unav-hidden" id="translate-list">
+                        <ul class="language-links unav-hidden" id="translate-list" aria-hidden="true">
                             <li class="smt-item">
                                 <a translate="no" lang="en" class="smt-link sl_norewrite" href="#">English</a>
                             </li>
@@ -143,7 +141,7 @@
    
     
     <div class="unav-bg-ny-blue unav-min-h-[75px] unav-flex unav-flex-col md:unav-flex-row unav-items-center unav-text-white unav-font-bold">
-    <h1 class="unav-text-2xl  unav-my-4 unav-mx-12 unav-font-sans"> Example State Agency </h1>
+    <h1 class="unav-text-2xl  unav-my-4 unav-mx-12 dsari"> Example State Agency </h1>
     <ul class="unav-mx-4 unav-grow unav-hidden lg:unav-flex unav-text-sm ">
         <li class="unav-m-4">Navigation Item 1</li>
         <li class="unav-m-4">Navigation Item 2</li>

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         translatelist.classList.toggle('unav-hidden');
         translatelist.classList.toggle('unav-flex');
         translatearrow.classList.toggle('fa-rotate-180');
-        unavAria();
+        translateAria();
 }
 
     function unavAria () {
@@ -46,6 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
             disclosure.setAttribute('aria-hidden', true)
             unavbutton.setAttribute('aria-expanded', false)
+        }
+    }
+
+    function translateAria () {
+        if (translatelist.getAttribute('aria-hidden') === "true" && translatebutton.getAttribute('aria-expanded') === "false"){
+            translatelist.setAttribute('aria-hidden', false)
+            translatebutton.setAttribute('aria-expanded', true)
+        }
+        else {
+            translatelist.setAttribute('aria-hidden', true)
+            translatebutton.setAttribute('aria-expanded', false)
         }
     }
 })
