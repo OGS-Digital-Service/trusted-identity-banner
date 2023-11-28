@@ -1,62 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const unavbanner = document.getElementById('unav-banner');
-    const unavbutton = document.getElementById('trust-disclose');
+    const unavBanner = document.getElementById('unav-banner');
+    const unavButton = document.getElementById('trust-disclose');
     const disclosure = document.getElementById('site-disclosure');
-    const unavarrow = document.getElementById('unav-arrow');
-    const translatebutton = document.getElementById('translate-button');
-    const translatelist = document.getElementById('translate-list');
-    const translatearrow = document.getElementById('translate-arrow');
+    const unavArrow = document.getElementById('unav-arrow');
+    const translateButton = document.getElementById('translate-button');
+    const translateList = document.getElementById('translate-list');
+    const translateArrow = document.getElementById('translate-arrow');
+    const search = document.getElementById('unav-search-input');
+    const searchClear = document.getElementById('unav-search-clear')
 
-    translatebutton.addEventListener("click",showtranslate) 
-    unavbutton.addEventListener("click", showdisclouse) 
-    document.addEventListener("click", clickoutside)
+    translateButton.addEventListener("click",showTranslate) 
+    unavButton.addEventListener("click", showDisclouse) 
+    document.addEventListener("click", clickOutside)
+    
+    search.addEventListener("focusin", searchFocus)
+    search.addEventListener("focusout", searchFocus)
+    searchClear.addEventListener("click", clearSearch)
 
-    function clickoutside (evt) {
+
+    function clickOutside (evt) {
         var target = evt.target;
-            if (target === unavbanner || unavbanner.contains(target) || target === disclosure || disclosure.contains(target)) {
+            if (target === unavBanner || unavBanner.contains(target) || target === disclosure || disclosure.contains(target)) {
             }
             else {
                 disclosure.classList.add('unav-hidden');
                 disclosure.classList.remove('unav-flex');
-                unavarrow.classList.remove('fa-rotate-180');
+                unavArrow.classList.remove('fa-rotate-180');
                 disclosure.setAttribute('aria-hidden', true)
-                unavbutton.setAttribute('aria-expanded', false)
+                unavButton.setAttribute('aria-expanded', false)
             }
     }
 
-    function showdisclouse () {
+    function showDisclouse () {
             disclosure.classList.toggle('unav-hidden');
             disclosure.classList.toggle('unav-flex');
-            unavarrow.classList.toggle('fa-rotate-180');
+            unavArrow.classList.toggle('fa-rotate-180');
             unavAria();
     }
 
-    function showtranslate () {
-        translatelist.classList.toggle('unav-hidden');
-        translatelist.classList.toggle('unav-flex');
-        translatearrow.classList.toggle('fa-rotate-180');
+    function showTranslate () {
+        translateList.classList.toggle('unav-hidden');
+        translateList.classList.toggle('unav-flex');
+        translateArrow.classList.toggle('fa-rotate-180');
         translateAria();
 }
 
     function unavAria () {
-        if (disclosure.getAttribute('aria-hidden') === "true" && unavbutton.getAttribute('aria-expanded') === "false"){
+        if (disclosure.getAttribute('aria-hidden') === "true" && unavButton.getAttribute('aria-expanded') === "false"){
             disclosure.setAttribute('aria-hidden', false)
-            unavbutton.setAttribute('aria-expanded', true)
+            unavButton.setAttribute('aria-expanded', true)
         }
         else {
             disclosure.setAttribute('aria-hidden', true)
-            unavbutton.setAttribute('aria-expanded', false)
+            unavButton.setAttribute('aria-expanded', false)
         }
     }
 
     function translateAria () {
-        if (translatelist.getAttribute('aria-hidden') === "true" && translatebutton.getAttribute('aria-expanded') === "false"){
-            translatelist.setAttribute('aria-hidden', false)
-            translatebutton.setAttribute('aria-expanded', true)
+        if (translateList.getAttribute('aria-hidden') === "true" && translateButton.getAttribute('aria-expanded') === "false"){
+            translateList.setAttribute('aria-hidden', false)
+            translateButton.setAttribute('aria-expanded', true)
         }
         else {
-            translatelist.setAttribute('aria-hidden', true)
-            translatebutton.setAttribute('aria-expanded', false)
+            translateList.setAttribute('aria-hidden', true)
+            translateButton.setAttribute('aria-expanded', false)
         }
     }
+
+    function searchFocus () {
+        if (search === document.activeElement) {
+            searchClear.classList.toggle('unav-hidden')
+
+        }
+    }
+
+    function clearSearch (){
+        search.value = ''
+    }
+
 })
