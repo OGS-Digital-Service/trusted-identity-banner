@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NYS Trusted Identity Banner Demo">
+    <meta name="description" content="NYS Trusted Identity Banner Demo / Universal Navigation">
     <meta name="generator" content="11ty/eleventy">    
     <link href="/css/unav.css" rel="stylesheet">
 <link href="/css/fonts.css" rel="stylesheet">
@@ -11,13 +11,13 @@
 
 
     <script src="/js/unav.js"></script>
-    <title>NYS Trusted Identity Banner Demo</title>
+    <title>NYS Trusted Identity Banner Demo / Universal Navigation</title>
   </head>
   <body>
   <a href="#main-site-content-for-skiplink" class="unav-sr-only focus:unav-not-sr-only unav-text-blue-700 unav-underline">Skip to Main Content</a>
     
     <section aria-label="An official website of the state of new york" id="unav-banner">
-  <header class="unav-flex unav-flex-row  unav-flex-wrap">
+  <header class="unav-flex unav-flex-row unav-flex-wrap">
    
    
     <a href="https://ny.gov" class="unav-flex unav-flex-col md:unav-flex-row unav-items-center md:unav-order-1 unav-order-3 unav-w-16 unav-ml-8 md:unav-ml-[60px]">
@@ -74,12 +74,12 @@
             <nav aria-labelledby="langnav_header">
                 <ul class="smt-menu">
                     <li class="smt-trigger" data-once="bind-click-event">
-                        <button class="smt-trigger-link unav-text-base unav-text-ny-blue " tabindex="0" id="translate-button" aria-expanded="false">
+                        <button class="smt-trigger-link unav-text-base unav-text-ny-blue unav-flex unav-items-center" tabindex="0" id="translate-button" aria-expanded="false">
                             <span aria-hidden="true"><i class="fa-solid fa-globe "></i></span>
-                            <span class="smt-lang unav-font-bold unav-px-1 unav-mb-1 md:unav-inline unav-hidden" id="langnav_header">Translate</span>
+                            <span class="smt-lang unav-font-bold unav-px-2 md:unav-inline unav-hidden" id="langnav_header">Translate</span>
                             <span aria-hidden="true" class="md:unav-inline unav-hidden"><i class="fa-solid fa-angle-down" id="translate-arrow"></i></span>
                         </button>
-                        <ul class="language-links unav-hidden" id="translate-list" aria-hidden="true">
+                        <ul class="language-links unav-hidden unav-bg-ny-light" id="translate-list" aria-hidden="true">
                             <li class="smt-item">
                                 <a translate="no" lang="en" class="smt-link sl_norewrite" href="#">English</a>
                             </li>
@@ -128,10 +128,23 @@
             </nav>
         </div>
 </div>
-    <div class="unav-flex unav-items-center unav-order-5 md:unav-order-4 unav-mr-[60px]">
-    <label for="unav-search"> Search </label>
-    <input type="search" id="unav-search" name="usearch"/>
-    <span aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <div class="unav-flex unav-items-center unav-order-5 md:unav-order-4 unav-mr-[60px] unav-ml-3">
+    <div class="unav-border-2 unav-border-ny-mid unav-rounded">
+
+            <label for="unav-search" class="unav-absolute unav-ml-4 unav-mt-1 unav-text-ny-dark unav-z-10"> Search </label>
+
+        <button class="unav-hidden"><i class="fa-solid fa-xmark"></i></button>
+
+            <input type="search" id="unav-search-input" name="usearch" class="unav-p-2 unav-h-8 unav-z-20 unav-relative unav-bg-transparent"/>
+
+        <button class="unav-bg-ny-blue">
+            <span aria-hidden="true"><i class="fa-solid fa-magnifying-glass unav-text-white"></i></span>
+        </button>
+    </div>
+
+
+
+
 </div>
   
 
@@ -149,10 +162,9 @@
 </div>
     <main class="" id="main-site-content-for-skiplink">
     <section class="unav-text-center">
-    <h1 class="unav-font-bold unav-text-2xl unav-my-16">NYS Trusted Identity Banner Demo </h1> 
+    <h1 class="unav-font-bold unav-text-2xl unav-my-16">NYS Trusted Identity Banner Demo / Universal Navigation </h1> 
     <ul>
         <li><a class="unav-text-ny-links unav-underline hover:unav-text-blue-900 focus:unav-text-blue-900" href="/pa11y-reports"> Automated Pa11y Results for this component </a></li>
-        <li><a class="unav-text-ny-links unav-underline hover:unav-text-blue-900 focus:unav-text-blue-900" href="/nav"> A version with global navigation for reference </a></li>
     </ul>
 </section>
     </main>
