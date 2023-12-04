@@ -242,9 +242,9 @@
 
             <label for="unav-search" class="unav-absolute unav-ml-4 unav-mt-1 unav-text-ny-dark unav-z-10"> Search </label>
 
-            <button class="unav-hidden" id="unav-search-clear"><i class="fa-solid fa-xmark"><span class="sr-only">clear search </span></i></button>
+            <button class="unav-hidden" id="unav-search-clear" type="button"><i class="fa-solid fa-xmark"><span class="sr-only">clear search </span></i></button>
 
-            <input type="search" id="unav-search-input" name="usearch" required class="unav-p-2 unav-h-8 unav-z-20 unav-relative unav-bg-transparent focus:unav-bg-white md:focus:unav-w-[500px]"/>
+            <input type="search" id="unav-search-input" name="usearch" required class="unav-p-2 unav-h-8 unav-z-20 unav-relative unav-bg-transparent focus:unav-bg-white"/>
 
         <button class="unav-bg-ny-blue unav-h-8 unav-rounded-r unav-px-4" type="submit">
             <span aria-hidden="true"><i class="fa-solid fa-magnifying-glass unav-text-white"></i></span>
@@ -308,6 +308,7 @@
     
     search.addEventListener("focusin", searchFocus)
     search.addEventListener("focusout", searchFocus)
+
     searchClear.addEventListener("click", clearSearch)
 
 
@@ -363,8 +364,11 @@
     function searchFocus () {
         if (search === document.activeElement) {
             searchClear.classList.toggle('unav-hidden')
-
         }
+       
+        
+
+
     }
 
     function clearSearch (){

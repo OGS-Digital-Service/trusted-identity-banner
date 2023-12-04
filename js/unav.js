@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     search.addEventListener("focusin", searchFocus)
     search.addEventListener("focusout", searchFocus)
+
     searchClear.addEventListener("click", clearSearch)
 
 
@@ -70,8 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function searchFocus () {
         if (search === document.activeElement) {
             searchClear.classList.toggle('unav-hidden')
-
         }
+       
+        
+
+
     }
 
     function clearSearch (){
